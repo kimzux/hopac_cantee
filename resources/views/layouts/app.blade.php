@@ -83,7 +83,15 @@
                     </a>
                 </li>
             @endcan
-            <!-- Nav Item - Utilities Collapse Menu -->
+           
+
+                <li class="nav-item {{ Request::url() == url('parent') ? 'active' : '' }}">
+                    <a class="nav-link collapsed" href="{{ route('parent') }}">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <span>Parent</span>
+                    </a>
+                </li>
+  
           
                 <li class="nav-item {{ Request::url() == url('foodie') ? 'active' : '' }}">
                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
@@ -140,7 +148,7 @@
                 <li class="nav-item {{ Request::url() == url('user-management') ? 'active' : '' }}">
                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUser"
                         aria-expanded="true" aria-controls="collapseUser">
-                        <i class="fas fa-fw fa-folder"></i>
+                        <i class="fas fa-users"></i>
                         <span>user-management</span>
                     </a>
                    

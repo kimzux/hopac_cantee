@@ -45,10 +45,12 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/addstudent', 'StudentController@store');
     Route::post('/editStudent', 'StudentController@update');
    
-
+    Route::post('/add-amount', 'ParentController@store')->name('amount.store');
     Route::resource('/foodie', 'ProductController');
     Route::resource('/student', 'StudentController');
-   
+    Route::resource('/parent', 'ParentController');
+    Route::get('/parent', 'ParentController@index')->name('parent');
+    Route::get('/add-balance', 'ParentController@show')->name('show');
     Route::post('/import', 'StudentController@import')->name('import');
     Route::get('/students', 'StudentController@index')->name('student');
     

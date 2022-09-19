@@ -34,6 +34,11 @@ class Student extends Model
 		return $this->hasMany('App\Order');
 	
 	}
+	public function parents()
+	{
+		// 'App\User','user_id'
+		return $this->belongsTo(Parents::class, 'student_id', 'id');
+	}
 	
 		
 	
